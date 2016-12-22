@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ресторан</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="css/carousel.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <div class="navbar-wrapper">
+    <div class="container">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"  href="kontakt.html">Контакты </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="ribalka.html">Платная рыбалка</a></li>
+                <li><a href="otzivi.html">Отзывы  </a></li>
+                <li class="active"><a href="restoran.html">Ресторан</a></li>
+				 <li><a href="obratn.sviaz.html">Обратная связь</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+			
+
+    </div>
+	
+</div>	
+ <div class="jumbotron">
+      <div class="container">
+        <br><br><h3>Добро пожаловать в меню нашего ресторана!</h3>
+        <p>В данном разделе собраны фото наиболее популярных блюд нашего ресторана!</p>
+      </div>
+    </div>
+<div class="container">
+
+      <div class="gallery_cat1">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest1.jpg" alt="Морепродукты с овощами на гриле 'Живи и Путешествуй'">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest2.jpg" alt="Лосось с тимьяном">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest3.jpg" alt="Натюрморт из морепродуктов">
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest4.jpg" alt="Слабосоленая форель">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest5.jpg" alt="Тейлор Свифт, 2.5 млн. лайков">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest6.jpg" alt="Бейонс, 2.4 млн. лайков">
+              </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest7.jpg" alt="Кайли Кардашьян-Дженнер, 2.3 млн. лайков">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest8.jpg" alt="Тейлор Свифт, 2.7 млн. лайков">
+              </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <a class="thumbnail">
+                <img src="./image/rest9.jpg" alt="Кендалл Дженнер, 3.6 млн. лайков">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      <hr>
+    </div> 
+ <div id="myModalBox" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Заголовок модального окна -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="title_modal">Заголовок модального окна</h4>
+          </div>
+          <!-- Основное содержимое модального окна -->
+          <div class="modal-body">
+            <a class="thumbnail">
+              <img src="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	 <script type="text/javascript">
+      $('img').on('click', function(event){
+        event.preventDefault();
+        console.log( $(this).attr('src') );
+        $('#title_modal').text($(this).attr('alt'));
+        $('#myModalBox .modal-dialog .modal-content .modal-body img').attr('src', $(this).attr('src'));
+        $('#myModalBox').modal('show');
+      })
+      $('#myModalBox').on('click', function() {
+        $("#myModalBox").modal('hide')
+      });
+    </script>
+  </body>
+</html>
